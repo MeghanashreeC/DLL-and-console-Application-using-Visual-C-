@@ -1,0 +1,22 @@
+#include <iostream>
+#include "FibLibrary.h"
+
+int main()
+{
+	int a, b;
+	std::cout << "enter fib a: ";
+	std::cin >> a;
+	std::cout << "enter fib b: ";
+	std::cin >> b;
+
+fibonacci_init(1, 1);
+
+do
+{
+	std::cout << fibonacci_index() << ": "
+		<< fibonacci_current() << std::endl;
+
+} while (fibonacci_next());
+std::cout << fibonacci_index() + 1  << "Fibonacci sequence values fit in an" <<
+"unsigned 64 bit integer:" << std::endl;
+}
